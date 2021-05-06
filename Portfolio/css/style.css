@@ -1,0 +1,246 @@
+
+
+/* コンテナ */
+/* Bootstrap使用するため削除 */
+/* .container{
+    width:1200px;
+    margin:0 auto;
+} */
+
+header{
+    position :fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 60px;
+    background-color:rgba(109, 105, 100, 0.9);
+}
+
+
+/* ポートフォリオ(logo) */
+.header-left{
+    padding-top: 15px;
+    padding-left: 10px;
+    float: left;
+    font-weight:bold;
+    text-decoration: none;
+}
+.header-left a{
+    text-decoration: none;
+    color:white;
+}
+
+/* メニューリスト */
+.header-right{
+    padding-top: 15px;
+    float: right;
+}
+.header-right-list li{
+    cursor: pointer;
+    text-decoration: none;
+
+    padding-right: 12px;
+    list-style: none;
+    display:inline-block;
+    transition: all 0.5s;
+}
+.header-right-list li:hover{
+    /* font-weight: bold; */
+    /* transform:translateY(-5px); */
+    /* background-color: rgba(255,255,255,0.5); */
+}
+.header-right-list a{
+    text-decoration: none;
+    color:white;
+}
+
+
+/* TOP画像 todo 画像リストに後で変更する */
+.top-wrapper{
+    padding-top: 60px;
+    height: 660px;
+    /* background-color:rgb(219, 183, 136); */
+}
+.top-image{
+    /* height: 600px; */
+    /* background-size: cover;
+    background-image: url("../img/top.jpg"); */
+    /* background-position: 50% 30%; */
+    /* max-width: 100%; */
+}
+.top-image img{
+    max-width: 100%;
+    max-height: 600px;
+}
+
+/* 各メニューの題名と下線 */
+.contents-title h1{
+    text-align: center;
+    /* border-bottom: 2px solid black; */
+    text-decoration:underline;
+}
+
+/* about me */
+.about-warpper{
+    /* margin-top: 60px; */
+    height: 550px;
+    background-image: url("../img/business-2846221_1920.jpg");
+    background-size: cover;
+    /* opacity: 0.8; */
+}
+/* .about-container{
+    width: 100%;
+    height: 100%;
+} */
+.profile-image{
+    /* position: relative; */
+    /* float: left; */
+    /* width: 50%; */
+    height: 400px;
+    /* background-image: url("../img/top.jpg"); */
+    background-size: cover;
+}
+.profile-image img{
+    max-width: 100%;
+    height: auto;
+}
+.profile-list{
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 400px;
+}
+.about-list li{
+    /* padding-right: 12px; */
+    /* list-style: none; */
+    /* display:inline-block; */
+    /* transition: all 0.5s; */
+}
+.about-list-item{
+    cursor: pointer;
+    border-bottom: 2px black solid;
+    list-style: none;
+}
+.about-answer {
+    font-size: 12px;
+    display: none;
+    padding: 5px 0px;
+    margin-bottom: 15px;
+  }
+
+
+/* 実務経験 */
+.skill-wrapper{
+    /* margin-top: 50px; */
+    height: 400px;
+    background-image: url("../img/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg");
+    background-size: cover;
+}
+.skill-icon{
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 33%;
+
+}
+.skill-icon p{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* 作品 */
+.sample-wrapper{
+    margin-top: 30px;
+    height: 600px;
+}
+.sample-list{
+    /* display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; */
+}
+.sample-item{
+    /* display: -webkit-box;
+	display: -ms-flexbox;
+	float: left; */
+}
+.sample-item img{
+
+    max-width: 100%;
+    height: auto;
+}
+.sample .mask{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top:0; 
+    background-color:rgba(128, 128, 128, 0.384);
+    display: none;
+}
+
+.sample-text{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: white;
+    font-size: 14px;
+    display: none;
+}
+
+
+/* Contact */
+.contact-wrapper{
+    margin-top: 30px;
+    height: 600px;
+}
+.contact-form {
+
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color:rgba(109, 105, 100, 0.9);
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+.footer-wrapper{
+
+}
+
+.footer-list {
+
+}
+.footer-list-item li {
+    cursor: pointer;
+    text-decoration: none;
+    padding-right: 20px;
+    list-style: none;
+    display:inline-block;
+}
+.footer-list-item a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* その他 */
+.mask-background-image {
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+}
+/* .text-active {
+    display: block;
+} */
