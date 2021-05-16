@@ -38,6 +38,37 @@ $(function(){
       $(this).find('.sample-text').fadeOut();
     }
   );
+
+  $('.menu-button').click(
+    function()
+    {
+      if ($(this).hasClass('active'))
+      {
+        $(this).removeClass('active');
+        $('.header-right').addClass('close').removeClass('open');
+        console.log("CLOSE");
+        // $(this).removeClass('show');
+      }
+      else
+      {
+        console.log("OPEN");
+        $(this).addClass('active');
+        $('.header-right').addClass('open').removeClass('close');
+        // $(this).addClass('show');
+      }
+    }
+  );
+
+
+
+
+
+
+
+
+
+
+
 });
 
 const sampleArray = [

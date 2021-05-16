@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- レイアウト崩れ防止 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ポートフォリオ</title>
         <link rel="stylesheet" href="css/style.css">
         <!-- Fontawesome CSS -->
@@ -22,10 +24,16 @@
                 <div class="header-left">
                     <a href="#">Portfolio</a>
                 </div>
+                <!-- スマホメニュー -->
+                <a class="fa fa-bars menu-button" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
                 <nav class="header-right">
                     <ul class="header-right-list">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#ABOUT">About</a></li>
                         <li><a href="#">Experience</a></li>
                         <li><a href="#">Work</a></li>
                         <li><a href="#">Contact</a></li>
@@ -47,7 +55,7 @@
         </div>
     </div>
 
-    <div class="about-warpper">
+    <div class="about-warpper" id="ABOUT">
         <div class="mask-background-image">
         <!-- Bootstrap (container-fluid) -->
         <div class="container">
