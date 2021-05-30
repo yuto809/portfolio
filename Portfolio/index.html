@@ -5,19 +5,23 @@
         <!-- レイアウト崩れ防止 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ポートフォリオ</title>
+        <!-- ローカルファイルからCSS読み込み -->
         <link rel="stylesheet" href="css/style.css">
-        <!-- Fontawesome CSS -->
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css" />
+        <link rel="stylesheet" href="css/slick_renew.css">
+        <!-- Fontawesome CSS読み込み -->
         <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
-        <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS読み込み -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <!-- Jquery.js, Popper.js, Bootstrap.js -->
+        <!-- Jquery.js, Popper.js, Bootstrap.js読み込み -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     </head>
     <body>
     <header>
+        <!-- ヘッダー表示領域 -->
         <div class="header-warpper">
             <!-- Bootstrap (container-fluid) -->
             <div class="container-fluid">
@@ -32,49 +36,82 @@
                 </a>
                 <nav class="header-right">
                     <ul class="header-right-list">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#HOME">Home</a></li>
                         <li><a href="#ABOUT">About</a></li>
-                        <li><a href="#">Experience</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#EXPERIENCE">Experience</a></li>
+                        <li><a href="#WORK">Work</a></li>
+                        <li><a href="#CONTACT">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-
     </header>
 
-    <div class="top-wrapper">
-        <!-- Bootstrap (container-fluid) -->
+    <!-- TOP領域 -->
+    <div class="top-wrapper" id="HOME">
+        <!-- Bootstrap (container) -->
         <div class="container">
             <div class="row justify-content-center">
-                <div class="top-image">
-                    <img src="img/top.jpg" alt="Top Image">
-                </div>
+                <!-- カルーセルでスライドショー -->
+                <div class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+                    <!-- インジゲータ -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-mainContents" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-mainContents" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner col-xs-12 top-image" role="listbox" >
+                        <div class="carousel-item active ">
+                            <img src="img/top.jpg" alt="Top Image" >  
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="img/img_wafer.jpg" alt="Top Image" >
+                        </div>
+                        <div class="top-image-text">
+                            <h1>Portfolio</h1>
+                            <p> Yuto / Engineer</p>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>
     </div>
-
+    
+    <!-- About領域 -->
     <div class="about-warpper" id="ABOUT">
+        <!-- 背景を薄く表示 -->
         <div class="mask-background-image">
-        <!-- Bootstrap (container-fluid) -->
-        <div class="container">
-            <!-- Bootstrap (container-fluid) -->
-            <div class="row justify-content-center">
-                <div class="contents-title">
-                    <h1>About me</h1>
+            <!-- Bootstrap (container) -->
+            <div class="container">
+                <!-- Bootstrap (row) -->
+                <div class="row justify-content-center">
+                    <div class="contents-title">
+                        <h1>About me</h1>
+                    </div>
                 </div>
-            </div>
-            <!-- <div class="row justify-content-center"> -->
-            <div class="row">
-                <!-- <div class="profile-list"> -->
+                <!-- Bootstrap (row) -->
+                <div class="row">
                     <div class="profile-image col-md-6">
                         <img src="img/top.jpg" alt="Top Image">
+                        <p>
+                            Yuto Nakayama
+                            <!-- 外部リンク -->
+                            <a href="https://twitter.com/mahindality">
+                                <!-- 重ねて表示 -->
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-square fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse icon-twitter"></i>
+                                </span>
+                            </a>
+                        </p>
                     </div>
-                    
+                    <!-- Bootstrap (col) -->
                     <ul class="about-list col-md-6">
+                        <!-- Q&Aリスト -->
                         <li class="about-list-item">
-                            <h3>1992年8月9日　中山雄登　山梨出身</h3>
+                            <h3>出身</h3>
+                            <div class="about-answer">
+                                <p>1992年8月9日生まれ　山梨出身</p>
+                            </div>
                         </li>
                         <li class="about-list-item">
                             <h3>職務経歴</h3>
@@ -97,17 +134,17 @@
                                 <p>ツール：Visual Studio</p>
                             </div>
                         </li>
-                        <div class="btn">twitter</div>
                     </ul>
-                <!-- </div> -->
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-    <div class="skill-wrapper">
+    <!-- Experience表示領域 -->
+    <div class="skill-wrapper" id="EXPERIENCE">
+        <!-- 背景を薄く表示 -->
         <div class="mask-background-image">
-            <!-- Bootstrap (container-fluid) -->
+            <!-- Bootstrap (container) -->
             <div class="container">
                 <!-- Bootstrap (container-fluid) -->
                 <div class="row justify-content-center">
@@ -115,25 +152,25 @@
                         <h1>Experience</h1>
                     </div>
                 </div>>
-
+                <!-- Bootstrap (row) -->
                 <div class="row">
                     <div class="skill-list">
                         <div class="skill-icon col-md-4">
                             <h3>組み込みシステム開発</h3>
                             <i class="fas fa-microchip fa-7x"></i>
-                            <p>C言語を用いた組み込みシステムの開発が可能です。<br>
+                            <p class="skill-text">C言語を用いた組み込みシステムの開発が可能です。<br>
                                 現職では、半導体製造装置の開発に携わっております。</p>
                         </div>
                         <div class="skill-icon col-md-4">
                             <h3>上流~下流工程</h3>
                             <i class="fas fa-laptop fa-7x"></i>
-                            <p>上流工程から、下流工程といった一通りの<br>
+                            <p class="skill-text">上流工程から、下流工程といった一通りの<br>
                             　 業務経験を積んでおります。試験設計においては、不具合件数の削減に努めることができました。</p>
                         </div>
                         <div class="skill-icon col-md-4">
                             <h3>Web製作/開発</h3>
                             <i class="fas fa-code fa-7x"></i>
-                            <p>将来的には、Web製作/開発に携わりたいと考えております。<br>
+                            <p class="skill-text">将来的には、Web製作/開発に携わりたいと考えております。<br>
                                 そのため、html、CSS、JavaScript、PHPといった言語の習得に努めております。</p>
                         </div>
                     </div>
@@ -143,16 +180,20 @@
         </div>
     </div>
 
-    <div class="sample-wrapper">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="contents-title">
-                    <h1>Work</h1>
+    <!-- Work表示領域 -->
+    <div class="sample-wrapper" id="WORK">
+        <!-- 背景を薄く表示 -->
+        <div class="mask-background-image">
+            <!-- Bootstrap (container) -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="contents-title">
+                        <h1>Work</h1>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <!-- <div class="sample-list"> -->
+                <!-- Bootstrap (row) -->
+                <div class="row">
+                    <!-- 作品リスト -->
                     <div class="sample-item col-md-6">
                         <div class="sample">
                             <img src="img/top.jpg" alt="">
@@ -163,34 +204,36 @@
                                 使用言語:html / CSS / jQuery / Bootstrap<br>
                                 製作期間:7日
                             </p>
+                            
                         </div>
+                        <h3>Webページ作成</h3>
                     </div>
                     <div class="sample-item col-md-6">
                         <div class="sample">
-                            <img src="img/top.jpg" alt="">
+                            <img src="img/working.jpg" alt="">
                             <div class="mask">
                             </div>
                             <p class="sample-text">
                                 製作中<br>
-                            </p>    
+                            </p>
+                            
                         </div>
-
+                        <h3>xxxx</h3>
                     </div>
-                <!-- </div> -->
+                </div>
             </div>
-        </div>
+        </div>>
     </div>
 
-    <div class="contact-wrapper">
+    <!-- Contact表示領域 -->
+    <div class="contact-wrapper" id="CONTACT">
         <div class="container">
             <div class="contents-title">
                 <h1>Contact</h1>
             </div>
-
-            
-
+            <!-- 問い合わせフォーム -->
             <div class="contact-form">
-
+                <!-- 入力した内容はindex.phpへ -->
                 <form action="php/index.php" method="POST">
                     <div class="form-item">
                         Your Name
@@ -205,30 +248,25 @@
                     </div>
                     <textarea name="Context" id="" cols="30" rows="10"></textarea>
                     <div class="form-item">
-                        <input type="submit" value="Confirm">
-                
+                        <input type="submit" value="Submit">                
                     </div>
-
-                
-                
                 </form>
-
             </div>
-
         </div>
     </div>
 
     <footer>
+        <!-- フッター表示領域 -->
         <div class="footer-warpper">
             <!-- Bootstrap (container) -->
             <div class="container">
                 <nav class="footer-list">
                     <ul class="footer-list-item">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Experience</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#HOME">Home</a></li>
+                        <li><a href="#ABOUT">About</a></li>
+                        <li><a href="#EXPERIENCE">Experience</a></li>
+                        <li><a href="#WORK">Work</a></li>
+                        <li><a href="#CONTACT">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="copyright">
@@ -238,9 +276,7 @@
         </div>
     </footer>
 
-     
-
+    <!-- ローカルファイルからjs読み込み -->
     <script src="js/index.js"></script>
     </body>
-
 </html>
