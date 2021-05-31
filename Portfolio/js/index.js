@@ -2,96 +2,66 @@
 // JQuery
 $(function(){
 
+  // 項目をクリック
   $('.about-list-item').click(
     function()
     {
       var $answer = $(this).find('.about-answer');
 
+      // openクラスを含んでいる場合
       if($answer.hasClass('open'))
       {
+        // openクラスを削除して、スライドアップして項目を隠す
         $answer.removeClass('open');
         $answer.slideUp();
       }
       else
       {
-        $answer.addClass('open'); 
-        // slideDownメソッドを用いて、$answerを表示してください
+        // openクラスを追加して、項目をスライドダウン表示
+        $answer.addClass('open');
         $answer.slideDown();
       }
     }
   );
 
+  // 作品リストのホバー処理
   $('.sample').hover(
+    // カーソルを作品リストに合わせたときの処理
     function()
     {
-      // $('.mask').slideDown();
-      // $(this).find('.sample-text').addClass('text-active'); 
+      // 作品リスト上をマスクして、文章を表示
       $(this).find('.mask').slideDown();
       $(this).find('.sample-text').fadeIn();
-
     },
+    // ホバーを解除したとき
     function()
     {
-      // $('.mask').slideUp();
-      // $(this).find('.sample-text').removeClass('text-active'); 
+      // マスク、文章を消す
       $(this).find('.mask').slideUp();
       $(this).find('.sample-text').fadeOut();
     }
   );
 
+  // ヘッダーメニュー押下処理
   $('.menu-button').click(
     function()
     {
+      // ヘッダーメニュー押下時、activeクラスを含んでいる場合
       if ($(this).hasClass('active'))
       {
+        // activeクラス、openクラスを削除
         $(this).removeClass('active');
-        $('.header-right').addClass('close').removeClass('open');
-        console.log("CLOSE");
-        // $(this).removeClass('show');
+        $('.header-right').removeClass('open');
+        // console.log("CLOSE");
       }
       else
       {
-        console.log("OPEN");
+        // activeクラス、openクラスを追加
         $(this).addClass('active');
         $('.header-right').addClass('open').removeClass('close');
-        // $(this).addClass('show');
+        // console.log("OPEN");
       }
     }
   );
 
-
-
-
-
-
-
-
-
-
-
 });
-
-const sampleArray = [
-    {src: 'img/top.jpg', msg: 'sample1', size:'50%'},
-    {src: 'img/top.jpg', msg: 'sample2', size:'50%'},
-    {src: 'img/top.jpg', msg: 'sample3', size:'50%'},
-    {src: 'img/top.jpg', msg: 'sample4', size:'50%'},
-];
-
-
-
-
-// for (let i = 0; i < sampleArray.length(); i++)
-// {
-//     let thumbImage = document.createElement('img');
-//     thumbImage.setAttribute('src', album[i].src);
-//     thumbImage.setAttribute('alt', album[i].msg);
-//     thumbImage.setAttribute('width', album[i].size);
-//     //thumbFlame.insertBefore(thumbImage,null);
-
-
-
-
-
-
-// }
